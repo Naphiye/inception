@@ -32,13 +32,7 @@ Avant de lancer le projet, il est nécessaire de préparer certains fichiers de 
    - `db_password.txt` → contenu : mot de passe utilisateur MariaDB  
    - `db_root_password.txt` → contenu : mot de passe root MariaDB  
 
-Ces secrets seront utilisés dans les services Docker pour initialiser la base de données : 
-
-SQL_PASSWORD=$(cat /run/secrets/db_password.txt)
-
-SQL_ROOT_PASSWORD=$(cat /run/secrets/db_root_password.txt)
-
-
+Ces secrets seront utilisés dans les services Docker pour initialiser la base de données. 
 
 3. **Modifier la configuration NGINX** pour :  
    - Redéfinir le `server_name` avec le nom de domaine ou l’adresse IP souhaitée  
