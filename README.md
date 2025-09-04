@@ -17,8 +17,7 @@ Inception est un projet qui a pour objectif de découvrir et mettre en pratique 
 Avant de lancer le projet, il est nécessaire de préparer certains fichiers de configuration et secrets :  
 
 1. **Créer un fichier `.env`** dans le dossier `srcs/` pour définir les variables d’environnement suivantes :  
-   - `SQL_PASSWORD` : mot de passe de l’utilisateur MariaDB  
-   - `SQL_ROOT_PASSWORD` : mot de passe root de MariaDB  
+
    - `SQL_DATABASE` : nom de la base de données  
    - `SQL_USER` : nom de l’utilisateur WordPress  
    - `WP_ADMIN` : nom de l’administrateur WordPress  
@@ -26,11 +25,13 @@ Avant de lancer le projet, il est nécessaire de préparer certains fichiers de 
    - `WP_ADMIN_EMAIL` : email de l’administrateur  
    - `WP_USER` : nom d’un utilisateur WordPress supplémentaire  
    - `WP_USER_EMAIL` : email de l’utilisateur  
-   - `WP_USER_PASSWORD` : mot de passe utilisateur  
 
 2. **Créer un dossier `secret/` local** pour stocker les fichiers de mot de passe :  
    - `db_password.txt` → contenu : mot de passe utilisateur MariaDB  
-   - `db_root_password.txt` → contenu : mot de passe root MariaDB  
+   - `db_root_password.txt` → contenu : mot de passe root MariaDB
+   - `credentials.txt` → contenu :  `WP_ADMIN_PASSWORD` : mot de passe admin  &&  `WP_USER_PASSWORD` : mot de passe utilisateur  
+
+
 
 Ces secrets seront utilisés dans les services Docker pour initialiser la base de données. 
 
